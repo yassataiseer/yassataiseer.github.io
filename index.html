@@ -132,7 +132,13 @@ h1{
 h2{
     color:#0052eb;
 }
-
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  margin-top: auto;
+}
 
 .grid { 
   display: grid;
@@ -163,7 +169,19 @@ h2{
   text-decoration: none;
   cursor: pointer;
   }
+  .btn {
+  background-color: #4CAF50; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
 
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #33cc33;
+}
 </style>
 </head>
 <title>Home Page</title>
@@ -200,7 +218,7 @@ h2{
     <div class="text">
       <h3>Golang Crash Course Pt 2</h3>
       <p>Part 2 Golang Crash Course Tutorial</p>
-      <button>Explore more here</button>
+      <button class="btn">Explore more here</button>
     </div>
   </article>
 
@@ -211,7 +229,7 @@ h2{
 </div>
 </div>
 
-
+</body>
 
 <script>
 function myFunction() {
@@ -224,5 +242,13 @@ function myFunction() {
 }
 </script>
 
-</body>
+
+<br>
+<footer>
+<p>Contact and Experience</p>
+<button class="btn"><a href="https://www.youtube.com/channel/UCgfY9CE1qvviUHBYd5xYofw"><i class="fa fa-linkedin-square"></a></i></button>
+<button class="btn"><a href="https://www.linkedin.com/in/yassa-taiseer-5b0080212/"><i class="fa fa-youtube"></a></i></button>
+<button class="btn"><a href="https://github.com/yassataiseer"><i class="fa fa-github"></a></i></button>
+  <h6>This website was made by Yassa Taiseer</h6>
+</footer>
 </html>
