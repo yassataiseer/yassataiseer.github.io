@@ -127,6 +127,31 @@ h1{
 h2{
     color:#0052eb;
 }
+
+
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.grid > article img {
+  max-width: 100%;
+}
+.text {
+  padding: 0 20px 20px;
+}
+.text > button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  }
 </style>
 </head>
 <title>Home Page</title>
@@ -152,9 +177,25 @@ h2{
 <div class="card">
 <div class="container">
 <h1>Text tutorials will be available here soon!</h1>
-<h3>Check out my latest video:</h3>
+<h2>Check out my latest video:</h2>
 <iframe src="https://www.youtube.com/embed/videoseries?list=UUgfY9CE1qvviUHBYd5xYofw" seamless allowfullscreen></iframe>
  </p>
+
+ <h2>Text Tutorials:</h2>
+ <main class="grid">
+  <article>
+    <img src="title1.png" alt="Sample photo">
+    <div class="text">
+      <h3>Seamlessly visualize quality</h3>
+      <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+      <button>Here's why</button>
+    </div>
+  </article>
+
+
+
+</main>
+<br>
 </div>
 </div>
 
