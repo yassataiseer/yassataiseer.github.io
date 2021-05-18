@@ -1,4 +1,3 @@
 User-agent: *
 Disallow:/
 Sitemap: https://yassataiseer.github.io/index.xml
-Allow: /index.xml
