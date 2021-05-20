@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+h1{
+    color:#2196F3;
+}
+h2{
+    color:#0052eb;
+}
+h3{
+    color:#00349c;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2);
+  transition: 0.3s;
+  background:rgb(234, 255, 209);
+  width: 60%;
+  margin:  0px auto;
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.topnav-right {
+  float: right;
+}
+body{
+    background:rgb(246, 255, 235);
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  margin-top: auto;
+}
+
+.btn {
+  background-color: #4CAF50; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #33cc33;
+}
+</style>
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+<meta name = "description" content="Yassa Taiseer's Golang Tutorial Pt 2"/>
+</head>
+<title>Python Crash Course Part 1</title>
+<body>
+
+<div class="topnav" id="myTopnav"   float: right;>
+<div class="topnav-right">
+
+  <a href="/index.html" >Go Back</a>
+  <a  href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="card">
+<div class="container">
+<br>
+<h1> Python Crash Course Part 1</h1>
+<p >Hello everyone, welcome to the first tutorial of my Python Crash Course today we will be exploring 
+some basics concepts of Python and as the series progresses it will advance.
+ </p>
+</div>
+</div>
+
+<br>
+<div class="card">
+<div class="container">
+<h2 >Part 1(Installation):</h2>
+<p >In order for your code to be understood by your computer there is the need for some drivers to help the code become interpreted and run. 
+Installation for Python is pretty straightforward. Go to this <a href="http://python.org/">Website</a>  and head to the "Downloads tab" and install 
+it for your Operating System.Be sure to pick Python 3 as that is the one we will be using. When installing make sure to click "Add to Path". 
+ </p>
+</div>
+</div>
+<br>
+
+
+
+<div class="card">
+<div class="container">
+<h2 >Part 2(Data types):</h2>
+<p> The first thing we will be exploring is the different types of data understanding which are: 
+<b>Integers,Strings,Floats,and Booleans</b>. These basic data structures are used in every program
+regardless of its complexity. 
+ </p>
+<h3>Booleans</h3>
+<p>Booleans are the most generic data types and are even found in hardware and are very similar to binary.
+ With boolean's basis if-else statement logic is created which we will get into later.
+Booleans have two values <b>True</b> Or <b>False</b> this is especially useful when we need a basic answer such as <i>is this car blue?</i> 
+We can simply use a boolean to answer this question.
+</p>
+
+ <pre><code class="Python">
+car_blue = False
+print(car_blue)#prints out False
+  </code></pre>
+
+<p>
+
+We put a <b>#</b> in front of any code we do not want the computer to read this is called <i>Comments</i>  they make code more readable.
+We can change the value of a boolean just by changing what it is equal to like this:
+</p>
+
+<pre><code class="Python">
+car_blue = False
+print(car_blue)
+#prints out False
+car_blue = True
+print(car_blue)
+#prints out True
+  </code></pre>
+
+<h3>Strings</h3>
+<p>Strings are the only data type that can hold alphanumeric values and just 
+like booleans can change in value as well as length. Programmers use strings to
+ hold this such as sentences, usernames, passwords etc.
+</p>
+<pre><code class="Python">
+car_blue = "The car is not blue"
+print(car_blue)
+#prints out:"The car is not blue"
+car_blue = "The car is blue"
+print(car_blue)
+#prints out:"The car is  blue"
+</code></pre>
+<p>We can also add strings together to make bigger strings and ever multiply like this:
+</p>
+<pre><code class="Python">
+car_blue = "The car is not blue"+" it is red"
+print(car_blue)
+#prints out:"The car is not blue it is red"
+car_blue = "The car is blue"*3
+print(car_blue)
+#prints out:" The car is blue  The car is blue  The car is blue ""
+</code></pre>
+<h3>Integers</h3>
+<p>Integers(A.K.A Ints) simply mean any whole number such as 1 or 
+400 however it does not include decimal numbers such as 1.15 or
+ ever 5.0 even though 5.0 is a whole number it contains a decimal. 
+ Any decimal number is called.We can do all BEDMAS operations with the Int data type
+</p>
+<pre><code class="Python">
+age = 15
+print(age)
+#prints out: 15
+age+=10 
+#adds 10 to current age
+age = age*10
+#multiplies age by 10
+age = age/10
+#divides age by 10
+age = age^2
+# age to the power of 2
+</code></pre>
+</div>
+</div>
+
+
+<div class="card">
+<div class="container">
+<h2 >Part 3(If-Else):</h2>
+<p >The next thing we will be looking at is If-Else statements.
+When coding sometimes we only want code to run when certain requirements are met otherwise it should not. 
+Such as if someone has more than $100 in their bank account they can be allowed to withdraw $100. 
+If-else statements are used here and if they did not exist the entire bank could go bankrupt
+ </p>
+ <pre><code class="Python">
+ money = 5000
+if money>100:#if statement is true will execute
+    print("The person can withdraw $100")
+else:
+    print("The person cannot withdraw $100")
+#output: "The person can withdraw $100"
+</code></pre>
+<p>
+As you can see the If-Else statements will only execute if a statement is True and as a result If-Else statements use boolean logic.
+</p>
+<p>
+We can also use <b>elif</b> statements when we may want to check to 
+see if another statement might be true as seen below:</p>
+<pre><code class="Python">
+money = 90
+if money>100:#if statement is true will execute
+    print("The person can withdraw $100")
+elif money>50:
+    print("Well you cant get $100 but you can get $50")
+else:
+    print("The person cannot withdraw $100")
+#output: "Well you cant get $100 but you can get $50"
+</code></pre>
+<p> As the elif statement is true it will execute and will not look at any other boolean logic below it</p>
+</div>
+</div>
+
+<br>
+
+<br>
+
+<br>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+<br>
+<footer>
+<p>Contact and Experience</p>
+<button class="btn"><a href="https://www.youtube.com/channel/UCgfY9CE1qvviUHBYd5xYofw"><i class="fa fa-linkedin-square"></a></i></button>
+<button class="btn"><a href="https://www.linkedin.com/in/yassa-taiseer-5b0080212/"><i class="fa fa-youtube"></a></i></button>
+<button class="btn"><a href="https://github.com/yassataiseer"><i class="fa fa-github"></a></i></button>
+  <h6>This website was made by Yassa Taiseer</h6>
+</footer>
+</html>
