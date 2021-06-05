@@ -169,7 +169,7 @@ then be configured to connect to the MySQL database, then we wrap the app
 into a SQLAlchemy instance to be further used later.
 </p>
 <pre><code class="Python">
-#model.py
+#models.py
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -195,7 +195,7 @@ will store user data. For this project we will have two tables Users
 and Posts. For the sake of simplicity, our tables will be small.
 </p>
 <pre><code class="Python">
-
+#models.py
 class User(db.Model):
    Username = db.Column(db.String(255), unique=True, nullable=False, primary_key=True)
    Password = db.Column(db.String(255),  nullable=False)
@@ -219,6 +219,7 @@ So now that our infrastructure for our database is built we must now build our
 database. This can be simple done by inserting the following code:
 </p>
 <pre><code class="Python">
+#models.py
 db.create_all()
 </code></pre>
 <p>
@@ -234,7 +235,7 @@ Now we can move onto inserting,deleting, and updating data in the next tutorial
 <br>
 <h2> Full code</h2>
 <pre><code class="Python">
-#model.py
+#models.py
 
 
 from flask import Flask
