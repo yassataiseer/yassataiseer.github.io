@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+h1{
+    color:#2196F3;
+}
+h2{
+    color:#0052eb;
+}
+h3{
+    color:#00349c;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2);
+  transition: 0.3s;
+  background:rgb(234, 255, 209);
+  width: 60%;
+  margin:  0px auto;
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.topnav-right {
+  float: right;
+}
+body{
+    background:rgb(246, 255, 235);
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  margin-top: auto;
+}
+
+.btn {
+  background-color: #4CAF50; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #33cc33;
+}
+</style>
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+<meta name = "description" content="How To Use Vectors In C++"/>
+</head>
+<title>Vectors In C++</title>
+<body>
+
+<div class="topnav" id="myTopnav"   float: right;>
+<div class="topnav-right">
+
+  <a href="/index.html" >Go Back</a>
+  <a  href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="card">
+<div class="container">
+<br>
+<h1>Vectors In C++</h1>
+<p>
+Hey everyone today we will be exploring vectors, 
+a very advanced data structure in C++ that is used in everyday use by programmers.
+They are able to hold data of any type and are dynamic often called lists or dynamic arrays as well. 
+</p>
+
+
+</div>
+</div>
+
+<br>
+<div class="card">
+<div class="container">
+<h2>Declarations:</h2>
+<p>
+In order to make a vector we need to import the given libraries below. 
+No need to install them as they already exist as long as you have C++ installed on your machine. 
+There are two main ways to create a vector one both ways below work
+</p>
+<pre><code class="C++">
+vector<int> new_vector = {1,2,3,4,5};//declare vector
+vector<int> vector_2(6,18);//Creates {18,18,18,18,18,18}
+//Creating vector of size 6 and insert 18
+</code></pre>
+<p>Both ways lead to the same result and depending on your situation use one over the other</p>
+</div>
+</div>
+<br>
+<div class="card">
+<div class="container">
+<h2>Indexing:</h2>
+<p>
+Indexing allows us to view a certain value within the vector; there are two ways to do this.
+</p>
+<pre><code class="C++">
+cout << vector_2.at(1)<< endl;//Output: 2
+cout << vector_2[1]<< endl; //Output: 2
+</code></pre>
+<p>The main difference between these two methods is that the first one will return errors if it is out of the index range. 
+As a result, using <b>.at(index)</b> is better practise.</p>
+</div>
+</div>
+<br>
+<div class="card">
+<div class="container">
+<h2>Front And Back:</h2>
+<p>
+We can view the first and last index of our vectors using the <b>.front()</b> and <b>.back()</b> method as follows:
+</p>
+<pre><code class="C++">
+cout << new_vector.front() << endl;
+cout << new_vector.back() << endl;
+</code></pre>
+</div>
+</div>
+<br>
+<div class="card">
+<div class="container">
+<h2>Sizing and Resizing:</h2>
+<p>
+When working with vectors we sometimes need to resize our vectors to be able to fit more data. We do this as so:
+</p>
+<pre><code class="C++">
+new_vector.resize(100);//makes vector with size 100
+cout << new_vector.size() << endl;//Output: 100
+</code></pre>
+</div>
+</div>
+<br>
+<div class="card">
+<div class="container">
+<h2>Pushback:</h2>
+<p>
+In order to insert more data into our vector, the data will be inserted into the end of the vector and sit on its very own index. 
+This can be seen here.
+</p>
+<pre><code class="C++">
+cout << new_vector.size() << endl;//output: 5
+new_vector.push_back(7);//insert 7 into the end of this vector
+cout << new_vector.size() << endl;//Output: 6
+</code></pre>
+<p> 
+As seen above by adding another value to the vector the entire size of it changes!
+</p>
+</div>
+</div>
+<br>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+<br>
+<footer>
+<p>Contact and Experience</p>
+<button class="btn"><a href="https://www.linkedin.com/in/yassa-taiseer-5b0080212/"><i class="fa fa-linkedin-square"></a></i></button>
+<button class="btn"><a href="https://www.youtube.com/channel/UCgfY9CE1qvviUHBYd5xYofw"><i class="fa fa-youtube"></a></i></button>
+<button class="btn"><a href="https://github.com/yassataiseer"><i class="fa fa-github"></a></i></button>
+  <h6>This website was made by Yassa Taiseer</h6>
+</footer>
+</html>
