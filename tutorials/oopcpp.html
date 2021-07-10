@@ -119,9 +119,9 @@ footer {
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-<meta name = "description" content="How To Use Vectors In C++"/>
+<meta name = "description" content="OOP For Begginers With C++"/>
 </head>
-<title>Vectors In C++</title>
+<title>OOP For Begginers With C++</title>
 <body>
 
 <div class="topnav" id="myTopnav"   float: right;>
@@ -140,11 +140,11 @@ footer {
 <div class="card">
 <div class="container">
 <br>
-<h1><a href="https://www.youtube.com/watch?v=WhO3xLlYNCs">Vectors</a> In C++</h1>
+<h1>OOP For Begginers With C++</h1>
 <p>
-Hey everyone today we will be exploring vectors, 
-a very advanced data structure in C++ that is used in everyday use by programmers.
-They are able to hold data of any type and are dynamic often called lists or dynamic arrays as well. 
+Hello everyone, today we will be learning about OOP(Object Oriented Programming) inside of C++. 
+Before you start, make sure you have a basic understanding as to how C++ works. 
+In this tutorial we will be building a grocery store class.
 </p>
 
 
@@ -154,79 +154,137 @@ They are able to hold data of any type and are dynamic often called lists or dyn
 <br>
 <div class="card">
 <div class="container">
-<h2>Declarations:</h2>
+<h2>Making A Class:</h2>
 <p>
-In order to make a vector we need to import the given libraries below. 
-No need to install them as they already exist as long as you have C++ installed on your machine. 
-There are two main ways to create a vector one both ways below work
+In order to make a class you need to first of all think of a name of the class and type it as so:
 </p>
-<pre><code class="C++">
-vector< int> new_vector = {1,2,3,4,5};//declare vector
-vector< int> vector_2(6,18);//Creates {18,18,18,18,18,18}
-//Creating vector of size 6 and insert 18
+<pre><code class="cpp">
+#main.cpp
+#include < iostream>
+#include < vector>
+#include < string>
+using namespace std;
+class GroceryStore {       // The class
+ 
+};
+ 
+ 
+int main()
+{
+   GroceryStore();//Call class
+   return 0;
+}
 </code></pre>
-<p>Both ways lead to the same result and depending on your situation use one over the other</p>
+<p>
+Make sure the class is outside the main method or any other method.
+You will call the class simply as you would a function.
+</p>
 </div>
 </div>
 <br>
+
 <div class="card">
 <div class="container">
-<h2>Indexing:</h2>
+<h2>Constructors:</h2>
 <p>
-Indexing allows us to view a certain value within the vector; there are two ways to do this.
+Constructors are used to specify data from the start within your class. 
+In our grocery store case we need to check the item that is being purchased along with the 
+price as well as the money in the wallet. 
+We will be using these values for things such as deciding if the person can buy the item or not.
+We can do this like so:
 </p>
-<pre><code class="C++">
-cout << vector_2.at(1)<< endl;//Output: 2
-cout << vector_2[1]<< endl; //Output: 2
+<pre><code class="cpp">
+#main.cpp
+#include < iostream>
+#include < vector>
+#include < string>
+using namespace std;
+class GroceryStore {       // The class
+ 
+   public:
+       GroceryStore(string item,int price, int money_wallet){//Constructor class
+       }
+ 
+ 
+};
+int main()
+{
+   GroceryStore Bob("Milk",15,20);
+   //Call the milk class
+   //Give it the variable Bob("name of customer")
+   //Milk cost 15 dollars and he has 20 bucks
+  
+   return 0;
+}
+//Output None
+
 </code></pre>
-<p>The main difference between these two methods is that the first one will return errors if it is out of the index range. 
-As a result, using <b>.at(index)</b> is better practise.</p>
+<p>
+Make sure to have your variables that you want to access/modify under the <b>public</b>: header as otherwise it will not be accessible as it would be private. 
+
+</p>
 </div>
 </div>
+
+
 <br>
 <div class="card">
 <div class="container">
-<h2>Front And Back:</h2>
+<h2>Methods:</h2>
 <p>
-We can view the first and last index of our vectors using the <b>.front()</b> and <b>.back()</b> method as follows:
+Our classes would be useless had they not had any sort of tasks to do. In order to assign tasks we make methods that take constructor values 
+and do something with them. Although they do need to take constructor values, they usually do. 
+Let's make a method that checks to see if Bob can afford to buy his milk.
 </p>
-<pre><code class="C++">
-cout << new_vector.front() << endl;
-cout << new_vector.back() << endl;
+<pre><code class="cpp">
+#main.cpp
+#include < iostream>
+#include < vector>
+#include < string>
+using namespace std;
+class GroceryStore {       // The class
+ 
+   public:
+       string item1;
+       int item_price;
+       int money;
+       GroceryStore(string item,int price, int money_wallet){
+           item1 = item;
+           item_price = price;
+           money = money_wallet;
+       }
+       bool Check(){//Method made
+           if(item_price< money){
+               cout << "The person can buy "<< item1 <<" as they are paying " << item_price;
+               return false;
+           }
+           else{
+               cout << "No they cannot buy "<< item1;
+               return true;
+           }
+       }
+ 
+};
+ 
+ 
+int main()
+{
+   GroceryStore Bob("Milk",15,20);
+   cout << Bob.Check() << endl;//Calling the check method and printing out values
+   //Output: The person can buy Milk as they are paying 150
+   return 0;
+}
+
 </code></pre>
+<p>
+Make sure the class is outside the main method or any other method.
+You will call the class simply as you would a function.
+</p>
 </div>
 </div>
+
 <br>
-<div class="card">
-<div class="container">
-<h2>Sizing and Resizing:</h2>
-<p>
-When working with vectors we sometimes need to resize our vectors to be able to fit more data. We do this as so:
-</p>
-<pre><code class="C++">
-new_vector.resize(100);//makes vector with size 100
-cout << new_vector.size() << endl;//Output: 100
-</code></pre>
-</div>
-</div>
-<br>
-<div class="card">
-<div class="container">
-<h2>Pushback:</h2>
-<p>
-In order to insert more data into our vector, the data will be inserted into the end of the vector and sit on its very own index. 
-This can be seen here.
-</p>
-<pre><code class="C++">
-cout << new_vector.size() << endl;//output: 5
-new_vector.push_back(7);//insert 7 into the end of this vector
-cout << new_vector.size() << endl;//Output: 6
-</code></pre>
-<p> 
-As seen above by adding another value to the vector the entire size of it changes!
-</p>
-</div>
-</div>
+
 <br>
 
 <script>
