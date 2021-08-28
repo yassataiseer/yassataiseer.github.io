@@ -353,7 +353,7 @@ public class Main {
        boolean take_trash = true;//you took out the trash
        boolean mow_lawn = false;//you did not mow a lawn
        if(take_trash&&mow_lawn){
-           // || is OR
+        // && is AND
            System.out.println("you get 5 dollars");
        }
        else{
@@ -386,20 +386,15 @@ add two numbers then return that value.
  <pre><code class="java">
  public class Main {
    public static void main(String[] args) {
-      
-       boolean take_trash = true;//you took out the trash
-       boolean mow_lawn = false;//you did not mow a lawn
-       if(take_trash&&mow_lawn){
-           // || is OR
-           System.out.println("you get 5 dollars");
-       }
-       else{
-           System.out.println("you don't get 5 dollars");
-       }
-           // Since take_trash is true but mow_lawn is false
-          // this won't run
-          //Output: you don't get 5 dollars
+       int num = add(1,3);
+       System.out.println(num);
+       //Output: 4
  }
+   static int add(int num1,int num2){//add function
+       //return an int
+       //take arguments num1, num2
+       return num1+num2;//Value returned to main function
+   }
 }
 </code></pre>
 </div>
